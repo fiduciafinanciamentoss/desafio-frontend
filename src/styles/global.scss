@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, button, input, li {
+  font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #F6F8FC;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  padding: .5rem;
+  background-color: rgb(44, 72, 165);
+  color: white;
+  border-radius: .5rem;
+  border: none;
+  margin-right: 1rem;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.fire-class {
+  background-color: #FF994D;
+  color: #663e1f;
+}
+
+.flying-class {
+  background-color: #bee8f3;
+  color: #3c494d;
+}
+
+.grass-class {
+  background-color: #A8EF86;
+  color: #405c34;
+}
+
+.poison-class {
+  background-color: #80b965;
+  color: #405e33;
+}
+
+.water-class {
+  background-color: #91B0FF;
+  color: #3b4768;
+}
+
+.bug-class {
+  background-color: #eafd3d;
+  color: #606818;
+}
+
+.normal-class {
+  background-color: #c2c2c2;
+  color: #505050;
+}
+
+.ghost-class {
+  background-color: #793cca;
+  color: #d4b5ff;
+}
+
+.ice-class {
+  background-color: #35caf0;
+  color: #165a6b;
+}
+
+.rock-class {
+  background-color: #646464;
+  color: #cecece;
+}
+
+.ground-class {
+  background-color: #5c3e16;
+  color: #d4c0a6;
+}
+
+.electric-class {
+  background-color: #F2E100;
+  color: rgb(94, 86, 60);
+}
+
+.psychic-class {
+  background-color: #822c85;
+  color: #ecb8ec;
+}
+
+.fairy-class {
+  background-color: #F6C8DD;
+  color: #5c4b52;
+}
+
+.fighting-class {
+  background-color: #D2DDF0;
+  color: #51555c
+}
+
+.steel-class {
+  background-color: #88BDA5;
+  color: #31443b
+}
+
+.dragon-class {
+  background-color: rgb(158, 29, 29);
+  color: rgb(233, 187, 187)
+}
+
+.dark-class {
+  background-color: #000;
+  color: #999;
+}
