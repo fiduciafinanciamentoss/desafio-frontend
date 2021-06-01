@@ -1,0 +1,40 @@
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  p {
+    color: #333;
+  }
+}
+
+.search-area {
+  margin: 2rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
+  input {
+    margin-right: 1rem;
+    max-width: 80%;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: .5rem;
+    padding: .5rem;
+  }
+
+  @media (max-width: 1030px){
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      margin-top: 1rem;
+      max-width: 10rem;
+    }
+  }
+}
+
+.center-button {
+  display: block;
+  margin: 2rem auto;
+}
