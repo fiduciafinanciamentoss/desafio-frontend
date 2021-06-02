@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  
+}
+
+.App-header{
+  width: 100%;
+  height: 48px;
+  background-color: rgb(228, 106, 106);
+ 
+}
+
+.img-Pokeball {
+position: absolute;
+width: 48px;
+height: 48px;
+}
+
+.logo-Container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-Pokedex {
+align-self: center;
+height: 48px;
+}
+
+.App-body {
+  width: 100vw;
+  height: 80vh;
+}
