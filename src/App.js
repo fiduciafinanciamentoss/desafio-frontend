@@ -3,7 +3,8 @@ import GlobalStyle from './globalstyle/global'
 import { Container } from './globalstyle/button';
 import Header from './components/Header/header'
 import { Content } from './components/Pokemon/List/List';
-import { Details } from './components/Pokemon/Details/Details';
+import "materialize-css/dist/css/materialize.min.css";
+// import { Details } from './components/Pokemon/Details/Details';
 import { getAllPokemon, getPokemon } from './services/pokemon'
 import React, { useState, useEffect } from 'react';
 
@@ -60,18 +61,19 @@ function App() {
       <Header />
       <h1 className="center-align">Desafio Front-End</h1>
       {loading ? (
-        <h1 style={{ textAlign: "center" }}>Loading...</h1>
+        <h1 style={{ textAlign: "center" }}>Carregando...</h1>
       ) : (
         <>
           <Container>
             <button onClick={prev}>Prev</button>
             <button onClick={next}>Next</button>
           </Container>
-          <div className="grid-container">
+          <div>
             {pokemonData.map((pokemon, i) => {
               return <Content key={i} pokemon={pokemon} />;
             })}
           </div>
+          
           <Container>
             <button onClick={prev}>Prev</button>
             <button onClick={next}>Next</button>

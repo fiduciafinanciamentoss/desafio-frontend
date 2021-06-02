@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Span = styled.div`
+  & + div {
+    margin-top: 3px;
+  }
+  span {
+    max-width: 100px;
     display: flex;
     justify-content: center;
-`;
-
-export const Card = styled.div`
-  width: 80%;
-  max-width: 300px;
-`;
-
-export const CardImg = styled.div`
-  img{
-    width: 150px;
-    height: 150px;
+    border-radius: 6px;
   }
 `;
-

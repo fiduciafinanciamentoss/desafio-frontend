@@ -1,31 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "materialize-css/dist/css/materialize.min.css";
-import { Link } from "react-router-dom";
-import { Container, Card, CardImg } from './styles';
-import typeColors from '../../../helpers/typeColors'
-import {Details} from '../Details/Details'
+// import { Link } from "react-router-dom";
+// import { Container, Card, CardImg } from './styles';
+import typeColors from '../../../helpers/typeColors';
+import { Span } from './styles';
 
 export const Content = ({ pokemon }) => {
+
   return (
-    <Container className="Row">
-        <Card className="card col s1">
-          <CardImg className="card-image">
-            <img src={pokemon.sprites.front_default} alt=""/>
-          </CardImg>
-          <div className="card_title black-text center-align">{pokemon.name}</div>
-          <div className="Card__types">
+    <div>
+      <ul class="collection">
+        <li class="collection-item avatar black-text">
+          <img src={pokemon.sprites.front_default} alt="" class="circle"></img>
+          <span className="title">{pokemon.name}</span>
+          <p><br/>
             {pokemon.types.map((type) => {
               return (
-                <div
-                  className="Card__type center-align"
-                  style={{ backgroundColor: typeColors[type.type.name] }}
-                >
-                  {type.type.name}
-                </div>
+                <Span>
+                  <span style={{ backgroundColor: typeColors[type.type.name] }}>
+                    {type.type.name}
+                  </span>
+                </Span>
               );
             })}
-          </div>
-        </Card>
-    </Container>
+          </p>
+          <button className="secondary-content btn-small">Details</button>
+        </li>
+      </ul>
+    </div>
   );
 };

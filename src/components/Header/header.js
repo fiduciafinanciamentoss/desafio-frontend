@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "materialize-css/dist/css/materialize.min.css";
  
 
-export default function Header () {
+export default function Header (props) {
+
+    const [search, setSearch] = useState('');
+
     return (
       <nav>
         <div className="nav-wrapper">
