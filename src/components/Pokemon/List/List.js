@@ -22,7 +22,7 @@ export const Content = ({ pokemon }) => {
         {isModalVisible ? (
           <Details onClose={() => setIsModalVisibile(false)}>
             <h2 className="title center-align">Details of {pokemon.name}</h2>
-            <img src={pokemon.sprites.front_default} alt="" />
+            <img src={pokemon.sprites.front_default} alt=""/>
             <table className="centered">
               <thead>
                 <tr>
