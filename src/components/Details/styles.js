@@ -15,13 +15,11 @@ export const ModalDetails = styled.div`
 `;
 
 export const Container = styled.div`
-  background-color: #26a69a;
+  background-color: #212121;
   color: #fff;
   width: 50%;
   height: 50%;
   border-radius: 10px;
-  top: 16px;
-  display: flex;
 
   button {
     border: none;
