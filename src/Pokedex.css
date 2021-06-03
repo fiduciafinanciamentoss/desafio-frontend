@@ -1,34 +1,125 @@
-* {
-  padding: 0;
-  margin: 0;
-  
-}
-
-.App-header{
+.App-header {
   width: 100%;
-  height: 48px;
-  background-color: rgb(228, 106, 106);
- 
+  height: 68px;
+  background-color: #da1111;
+  display: flex;
+  
+  align-items: center;
+  padding: 0 20px;
 }
 
 .img-Pokeball {
-position: absolute;
-width: 48px;
-height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
-.logo-Container{
+.logo-Container {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: absolute;
+  left: 0;
+}
+
+.search-container {
+  display: flex;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.search-container > input {
+  height: 38px;
+  padding: 10px;
+  width: 150px;
+  border: 0;
+  font-size: 18px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.search-container > button {
+  border: 0;
+  width: 60px;
+  border-left: 1px solid #333;
+  cursor: pointer;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .img-Pokedex {
-align-self: center;
-height: 48px;
+  width: 250px;
+  height: 100%;
 }
 
 .App-body {
   width: 100vw;
   height: 80vh;
+}
+.cards-container {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1140px;
+  margin: 16px auto;
+}
+
+.cards-container > .card {
+  margin: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 215px;
+  border: 2px solid rgb(66, 66, 66);
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.cards-container > .card .card-title {
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.cards-container > .card .card-img-container {
+  background: #e6f0f9;
+  border-radius: 100%;
+  width: 125px;
+  height: 125px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.cards-container > .card:hover .card-img-container {
+  background: linear-gradient(125deg, #e6f0f9, #e6f0f9, #da1111);
+  /* background: red; */
+  background-size: 300% 300%;
+  animation: gradient 3s linear infinite forwards;
+}
+
+.cards-container > .card .card-img {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.cards-container > .card .card-img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
 }
