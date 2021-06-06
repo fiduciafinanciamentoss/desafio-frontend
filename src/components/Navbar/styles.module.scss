@@ -1,0 +1,54 @@
+$primary-color: #f5db13;
+$paragraph: #212121;
+
+.containerNavbar {
+  display: flex;
+  background-color: $primary-color;
+
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0.4rem;
+
+  box-shadow: 0px 4px 16px rgba(1, 28, 64, 0.2);
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      list-style: none;
+
+      li {
+        margin: 2rem;
+
+        a {
+          color: $paragraph;
+          text-decoration: none;
+          font-size: 25px;
+
+          font-weight: 700;
+
+          transition: color 0.2s;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .containerNavbar {
+    flex-direction: column;
+
+    nav {
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}

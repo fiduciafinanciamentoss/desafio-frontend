@@ -1,0 +1,289 @@
+$dark-grey: #212121;
+.overlay {
+  background: rgba(33, 33, 33, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+
+  width: 80%;
+
+  button {
+    align-self: flex-end;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .left {
+    width: 40%;
+    background: #f6f7f9;
+    padding: 2rem;
+    border-radius: 16px 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      object-fit: contain;
+    }
+
+    .type {
+      align-self: flex-end;
+      display: flex;
+      text-transform: capitalize;
+
+      .grass,
+      .bug {
+        background-color: #73d677;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .water,
+      .ice {
+        background-color: #07d6f2;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .electric {
+        background-color: #f7c545;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .ground {
+        background-color: #9b897b;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .fire,
+      .fighting,
+      .dragon {
+        background-color: #f76545;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .stile,
+      .dark,
+      .rock {
+        background-color: #a1a1a1;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .normal,
+      .gosth {
+        background-color: #76aadb;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .poison,
+      .psychic,
+      .fairy,
+      .ghost {
+        background-color: #a974bc;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+    }
+  }
+
+  .right {
+    width: 60%;
+    background: #f80037;
+    border-radius: 0 16px 16px 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .head {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 1rem;
+      color: white;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+          margin-left: 0.4rem;
+          background-color: #f2cb07;
+          padding: 0.6rem;
+          border-radius: 50%;
+          width: 41px;
+          height: 41px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+        }
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      .abilities {
+        background-color: #fdfdfd;
+        width: 264px;
+        height: 60px;
+        padding: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 8px;
+
+        margin-bottom: 1rem;
+
+        div {
+          display: flex;
+          text-transform: capitalize;
+        }
+
+        p {
+          margin-left: 10%;
+        }
+      }
+
+      .stats {
+        display: flex;
+
+        background-color: #fdfdfd;
+        padding: 1rem;
+        border-radius: 8px;
+
+        align-items: center;
+
+        height: 78px;
+
+        div {
+          width: 50%;
+          &:first-child {
+            margin-right: 1rem;
+          }
+
+          .number {
+            font-weight: 700;
+          }
+
+          .healthyBar {
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(270deg, #64d368 0.15%, #64d368 70.88%);
+            display: block;
+            margin-top: 0.3rem;
+            border-radius: 2px;
+          }
+
+          .experienceBar {
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(180deg, #f5db13 0%, #f2b807 100%);
+            display: block;
+            margin-top: 0.3rem;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .habilities {
+        background: white;
+
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 23%;
+        text-transform: capitalize;
+
+        .circle {
+          border: 2px solid $dark-grey;
+          border-radius: 50%;
+
+          width: 38px;
+          height: 38px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0.4rem;
+
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

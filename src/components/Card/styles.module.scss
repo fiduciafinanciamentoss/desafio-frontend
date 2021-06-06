@@ -1,0 +1,213 @@
+$dark-grey: #212121;
+
+.card {
+  width: 100%;
+  background-color: #f6f7f9;
+  border-radius: 8px;
+
+  box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
+
+  display: flex;
+
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.5);
+  }
+
+  .left {
+    width: 40%;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 1rem;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+      margin-left: 1.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      text-transform: capitalize;
+    }
+
+    .pokeProps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .attack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-right: 0.8rem;
+      }
+
+      .defense {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+      }
+
+      .circle {
+        border: 2px solid $dark-grey;
+        border-radius: 50%;
+
+        width: 38px;
+        height: 38px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          font-size: 15px;
+        }
+      }
+      p {
+        font-size: 15px;
+
+        letter-spacing: 0px;
+      }
+    }
+
+    .type {
+      display: flex;
+      margin-top: 0.5rem;
+      padding: 0.8rem;
+      align-self: center;
+      margin-right: 1.5rem;
+
+      text-transform: capitalize;
+
+      .grass,
+      .bug {
+        background-color: #73d677;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .water,
+      .ice {
+        background-color: #07d6f2;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .electric {
+        background-color: #f7c545;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .ground {
+        background-color: #9b897b;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .fire,
+      .fighting,
+      .dragon {
+        background-color: #f76545;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .stile,
+      .dark,
+      .rock {
+        background-color: #a1a1a1;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .normal,
+      .gosth {
+        background-color: #76aadb;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+
+      .poison,
+      .psychic,
+      .fairy,
+      .ghost {
+        background-color: #a974bc;
+        border-radius: 11px;
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+        width: 100%;
+        padding: 0.3rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+    }
+  }
+
+  .right {
+    width: 60%;
+
+    background: #f5db13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 8px 8px 0;
+
+    img {
+      max-width: 160px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    width: 80%;
+
+    .left {
+      width: 50%;
+    }
+
+    .right {
+      width: 50%;
+      img {
+        width: 130px;
+      }
+    }
+  }
+}
