@@ -1,14 +1,16 @@
 import "./Pokedex.css";
 import { useState, useEffect } from "react";
+import React from 'react'
+import Modal from './components/Modal/modal'
 
 function Pokedex() {
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState([]);
+  const [selectedPokemon, setSelectedPokemon] = useState();
 
   useEffect(() => {
     const getPokemon = (id) => fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-
-    const pokemonIds = Array.from({ length: 250 }, (empty, index) => index + 1);
+    const pokemonIds = Array.from({ length: 25 }, (empty, index) => index + 1);
     const allPromises = pokemonIds.map((number) => {
       return getPokemon(number).then((response) => response.json());
     });
@@ -19,13 +21,22 @@ function Pokedex() {
       setPokemons(pokemons);
     });
   }, []);
+    
 
   if (loading) {
-    return <h1 style={{ color: 'white', fontSize: '99px'}}>Carregando...</h1>
+    return (
+      <h1 style={{ color: "white", fontSize: "89px", justifySelf: "center" }}>
+        Carregando...
+      </h1>
+    );
   }
+
+  console.log(selectedPokemon)
 
   return (
     <div className="App">
+      {selectedPokemon && <Modal pokemon={selectedPokemon} onClose={() => setSelectedPokemon(null)} />}
+
       <header className="App-header">
         <img
           src="/images/pokeball.png"
@@ -51,14 +62,26 @@ function Pokedex() {
             return (
               <div key={pokemon.id} className="card">
                 <h2 className="card-title">{pokemon.name}</h2>
+            
 
-                <div className="card-img-container">
+                <div className="card-img-container" onClick={() => setSelectedPokemon(pokemon)}>
                   <img
                     loading="lazy"
                     src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}
                     className="card-img"
                     alt={pokemon.name}
+
                   />
+                </div>
+
+                <div className="card-type-container">
+                  {pokemon.types.map((pokeType) => {
+                    return (
+                      <div key={pokeType.type.name} className="card-type">
+                      <h4> {pokeType.type.name} </h4>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );
