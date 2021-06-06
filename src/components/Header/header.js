@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "materialize-css/dist/css/materialize.min.css";
+import { Search, Content } from './styles';
  
 
 export default function Header (props) {
@@ -7,18 +7,19 @@ export default function Header (props) {
     const [search, setSearch] = useState('');
 
     return (
-      <nav>
-        <div className="nav-wrapper">
+      <Search>
+        <Content>
           <form>
-            <div className="input-field grey darken-4">
-              <input id="search" type="search" required />
-              <label className="label-icon" for="search">
-                <i className="material-icons">search</i>
-              </label>
-              <i className="material-icons">close</i>
-            </div>
+              <input 
+                id="search" 
+                type="search" 
+                required 
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Digite o nome de um Pokemon"
+                />
+              <button onClick={(e) => props.searchforPokemon(search)}>Pesquisar</button>
           </form>
-        </div>
-      </nav>
+        </Content>
+      </Search>
     );
 }

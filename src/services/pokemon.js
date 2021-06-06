@@ -17,3 +17,13 @@ export async function getAllPokemon(url) {
       });
   });
 }
+
+const initialURL = 'http://pokeapi.co./api/v2';
+const query = {
+  pokemon: 'pokemon'
+}
+
+export async function searchPokemon(pokemon){
+  console.log(`${initialURL}/${query.pokemon}/${pokemon}`);
+  return fetch(`${initialURL}/${query.pokemon}/${pokemon}`)
+}
