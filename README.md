@@ -1,46 +1,70 @@
-# Teste de Front-End - Fidúcia
+# Getting Started with Create React App
 
-Olá Dev, estamos a procura de profissionais interessados, boa capacidade de aprendizado, adaptação e proatividade!
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Quem Somos
+## Available Scripts
 
-Somos uma instituição financeira devidamente autorizada e regulada pelo Banco Central do Brasil. 
+In the project directory, you can run:
 
-Fundada em Janeiro de 2001, a Fidúcia é uma instituição financeira classificada como Sociedade de Crédito ao Microempreendedor e à Empresa de Pequeno Porte. Com a resolução
+### `yarn start`
 
-CMN 4.721 de maio de 2019, o escopo de atuação de uma instituição como a nossa tornou-se extremamente abrangente.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Hoje oferecemos aos nossos clientes, um banco digital prestador de serviços financeiros regulados altamente comprometido com as melhores práticas de governança corporativa, cumpridor fiel dos normativos regulatórios, ciber seguro e transparente em seus processos e em cadeia de custos.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Trabalhamos na concessão de um crédito de qualidade, de forma que o recurso liberado atue de forma saudável na vida de todos os envolvidos.
+### `yarn test`
 
-## Desafio 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-A missão de criar uma SPA (Single-page Application) para listar, detalhar e buscar pokémons, usando a API Pokeapi.co.
+### `yarn build`
 
-O Layout/Design é interamente livre para sua criatividade, mas a lista deverá conter no mínimo o nome do pokémon, elemento e a imagem.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Sugerimos que ao clicar em um item, abra um modal com mais informações ao seu critério sobre o Pokémon.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Como fazer?
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Será necessário usar as seguintes tecnologias
+### `yarn eject`
 
-- HTML
-- CSS
-- Javascript
-- Git
-- Consumo de API Rest
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Regras
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-No desafio será necessário os seguintes pontos:
-- No layout utilizar algum framework CSS (ex: Bootstrap, MaterializeCSS, Sass, TailWind ...)
-- Ao usar JS, de preferência utilizar algum framework (ex: ReactJS, Angular, VueJS), lembrando que ReactJS é diferencial, pois utilizamos aqui na Fidúcia, entretanto, caso não saiba nenhum dos frameworks citados, você poderá fazer sem eles, portanto, não desista.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Por onde começo?
+## Learn More
 
-Primeiramente, você pode fazer um fork desse repositório aqui, para sua conta do Github, depois disso crie uma branch nova com o seu nome (ex: nome_sobrenome), para podermos indentificá-lo.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Após terminar o desafio, você pode solicitar um pull request para a branch master do nosso repositório. Vamos receber e fazer a avaliação de todos.
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
