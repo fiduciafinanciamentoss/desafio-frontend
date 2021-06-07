@@ -15,6 +15,8 @@ function App() {
   const [nextUrl, setNextUrl] = useState("");
   const [prevUrl, setPrevUrl] = useState("");
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const initialURL = "https://pokeapi.co/api/v2/pokemon";
 
   useEffect(() => {
@@ -58,21 +60,40 @@ function App() {
   };
 
   const searchforPokemon = async (query) => {
+    if (!query) {
+      setErrorMsg('Você precisa digitar o nome do Pokemon');
+      setError(true);
+      console.log(query);
+    }
+    setError(false)
     setLoading(true)
-    const response = await searchPokemon(query);
-    const results = await response.json();
-    setPokemon(results);
-    setLoading(false)
+    setTimeout( async () => {
+      try{
+        const response = await searchPokemon(query);
+        const results = await response.json();
+        console.log(results);
+        setPokemon(results);
+        setLoading(false);
+      } catch (err) {
+        console.log(err);
+        setLoading(false);
+        setError(true);
+        setErrorMsg('Pokemon não encontrado.');
+      }
+      
+    }, 1500);
+    
   }
 
   return (
     <div className="App">
+      {error ? <div variant="danger">{errorMsg}</div> : null}
       <Header searchforPokemon={searchforPokemon} />
       {!loading && pokemon ? (
         <div>
-          <Content name={pokemon.name}/>
-        </div>//
-      ): null}
+          <Content />
+        </div> //
+      ) : null}
       <h1 className="center-align">Desafio Front-End</h1>
       {loading ? (
         <h1 style={{ textAlign: "center" }}>Carregando...</h1>
@@ -87,7 +108,7 @@ function App() {
               return <Content key={i} pokemon={pokemon} />;
             })}
           </div>
-          
+
           <Container>
             <button onClick={prev}>Prev</button>
             <button onClick={next}>Next</button>

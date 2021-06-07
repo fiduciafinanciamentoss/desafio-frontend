@@ -11,13 +11,11 @@ export default function Header (props) {
         <Content>
           <form>
               <input 
-                id="search" 
-                type="search" 
                 required 
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Digite o nome de um Pokemon"
                 />
-              <button onClick={(e) => props.searchforPokemon(search)}>Pesquisar</button>
+              <button block onClick={(e) => props.searchforPokemon(search)}>Pesquisar</button>
           </form>
         </Content>
       </Search>
