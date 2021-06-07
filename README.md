@@ -9,6 +9,6 @@ O que foi utilizado?
 
 Para rodar o projeto é necessário o seguinte:
 
-#1 Rodar o comando 'yarn'
+#1 Rodar o comando 'yarn' para instalar os pacotes necessários.
 
 #2 Em seguida, 'yarn start'.

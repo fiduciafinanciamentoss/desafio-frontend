@@ -1,5 +1,3 @@
-import './App.css';
-
 import * as ReactRedux from "react-redux";
 import store from "./redux/createStore";
 import Index from './components/Index';
