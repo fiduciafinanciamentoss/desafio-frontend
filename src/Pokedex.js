@@ -29,13 +29,6 @@ function Pokedex() {
     return <Loading />;
   }
 
-  function armazenarFiltro() {
-    const filteredPokemons = pokemons.filter((pokemon) => {
-      return pokemon.name.includes(searchTextInput.toLowerCase());
-    });
-    setFilteredPokemons(filteredPokemons);
-  }
-
   function buscaPoke() {
     const filteredPokemons = pokemons.filter((pokemon) => {
       return pokemon.name.includes(searchTextInput.toLowerCase());
