@@ -17,8 +17,6 @@
   z-index: 99;
 }
 
-
-
 .modal{
    width: 60vw;
    height: 45vh;
@@ -49,7 +47,15 @@
   border-radius: 50%;
   color: rgb(0, 0, 0);
   cursor: pointer;
-  
+}
+.close-btn:hover {
+  width: 28px;
+  height: 28px;
+  background-color: rgb(192, 74, 45);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s ease;
 }
 
 .modal .name-modal{
@@ -69,7 +75,7 @@
 
 .inf-modal {
   width: 75%;
-  height: 25%;
+  height: 28%;
   padding-top: 8px;
   text-transform: capitalize;
   font-size: 20px;
@@ -81,3 +87,5 @@
 	box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
   
 }
+
+

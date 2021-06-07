@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+}
+
+.tela-loading{
+  width: 100vw;
+  height: 100vh;
+  background: #FBFBFB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+ }
+
+.tela-loading .img-loading{
+  background-color: rgb(255, 255, 255);
+  width: 800px;
+  height: 600px;
+}
